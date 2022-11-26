@@ -5,6 +5,7 @@ metadata:
   name: angular
   labels:
     app: angular
+    namespace: angular
 spec:
   replicas: 1
   selector:
@@ -27,8 +28,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: default
   name: angular
+  namespace: angular
   labels:
     name: angular
     app: angular
@@ -45,7 +46,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx-angular-com
-  namespace: default
+  namespace: angular
   labels:
     app: angular
 spec:

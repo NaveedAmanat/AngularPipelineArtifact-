@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: angular
-        image: angular
+        image: angular:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80

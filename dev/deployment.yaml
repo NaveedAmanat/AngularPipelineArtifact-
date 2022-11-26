@@ -1,11 +1,10 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  namespace: default
+  namespace: angular
   name: angular
   labels:
     app: angular
-    namespace: angular
 spec:
   replicas: 1
   selector:

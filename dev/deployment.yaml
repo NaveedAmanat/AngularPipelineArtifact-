@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: angular
-        image: naveed0004/angular:6
+        image: naveed0004/angular:8
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80

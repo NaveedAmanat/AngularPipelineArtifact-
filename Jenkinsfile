@@ -7,7 +7,7 @@ pipeline{
                     withCredentials([usernamePassword(credentialsId: 'Github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         sh "git config user.email mnaveed0004@gmail.com"
                         sh "git config user.name NaveedAmanat"
-                        sh "sed -i 's+naveed0004/spring.*+naveed0004/angular:${IMAGE_TAG}+g' dev/deployment.yaml"
+                        sh "sed -i 's+naveed0004/angular.*+naveed0004/angular:${IMAGE_TAG}+g' dev/deployment.yaml"
                         sh "cat dev/deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job update artifact:v${IMAGE_TAG}'"
